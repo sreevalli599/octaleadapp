@@ -1,0 +1,108 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* Reduced width */
+    max-height: 80vh; /* Limit height to 80% of the viewport height */
+    position: relative;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background: #c0392b;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 20px; /* Reduced font size */
+    color: #333;
+  }
+  
+  p {
+    font-size: 14px; /* Reduced font size */
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px; /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px; /* Reduced font size */
+    margin-top: 5px;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  legend {
+    font-size: 16px; /* Reduced font size */
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  label input {
+    margin-right: 8px; /* Reduced margin */
+  }
+  
+  button {
+    background-color: #007bff; /* Button background color */
+    color: #fff;
+    padding: 8px 16px; /* Reduced padding */
+    border: none;
+    border-radius: 4px; /* Reduced border radius */
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Button hover color */
+  }
+  

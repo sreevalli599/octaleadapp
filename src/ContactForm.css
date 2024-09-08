@@ -1,0 +1,62 @@
+.contact-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f3f6f8; /* Blue background color */
+    color: white; /* White text color for contrast */
+  }
+  
+  .contact-text {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .contact-form {
+    background-color: #a4a0a0; /* White background color for the form */
+    padding: 15px; /* Reduced padding */
+    border: 1px solid #ddd; /* Light gray border around the form */
+    border-radius: 8px; /* Rounded corners for the form */
+    max-width: 400px; /* Reduced width */
+    width: 100%; /* Ensure the form fits within its container */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    color: white; /* White text color for form labels */
+  }
+  
+  .contact-form input {
+    padding: 10px; /* Reduced padding for smaller input fields */
+    border: 1px solid #ccc; /* Border to make input fields more visible */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: white; /* White background for inputs */
+    color: #333; /* Dark text color for better readability */
+    font-size: 14px; /* Slightly smaller text size */
+    width: 100%; /* Make input fields take the full width of their container */
+    max-width: 300px; /* Limit maximum width to prevent overly wide inputs */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Blue button */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

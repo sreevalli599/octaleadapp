@@ -1,0 +1,49 @@
+/* Ensure html and body take full height and enable scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto; /* Allow scrolling on the entire page */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app takes at least the full viewport height */
+}
+
+.App-header {
+  flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.company-image {
+  max-height: 150px; /* Adjust size as needed */
+  width: auto;
+}
+
+main {
+  flex: 1; /* Takes up the remaining space */
+  padding: 20px;
+}
+
+/* Optional: Add styles for body scrollbars */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

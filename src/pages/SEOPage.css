@@ -1,0 +1,31 @@
+.seo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    width: 100%;
+    height: 100vh; /* Optional: Full viewport height */
+  }
+  
+  .seo-image {
+    grid-column: 1; /* First column */
+  }
+  
+  .seo-image img {
+    width: 100%;
+    height: auto; /* Keeps aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area */
+  }
+  
+  .seo-content {
+    grid-column: 2; /* Second column */
+    padding: 20px; /* Optional: Adds some padding around the text */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+  
+  .seo-content h1, .seo-content h2, .seo-content p, .seo-content ul {
+    margin-bottom: 15px;
+  }
+  
+  .seo-content ul {
+    padding-left: 20px;
+  }
+  

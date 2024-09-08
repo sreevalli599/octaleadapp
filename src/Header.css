@@ -1,4 +1,141 @@
 /* src/Header.css */
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Space between nav menu and login button */
+    align-items: center; /* Center items vertically */
+    padding: 4px 8px; /* Adjust padding as needed */
+    background-color: #f4f4f4; /* Background color */
+    border-bottom: 1px solid #ddd; /* Optional: Border for separation */
+}
+.headerRight {
+    display: flex;
+    align-items: center; 
+   
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows nav-menu to use remaining space */
+    justify-content: flex-start; /* Align links to the left */
+    position: relative; /* Required for positioning dropdown */
+}
+
+.nav-link {
+    margin: 0 8px; /* Spacing between links */
+    text-decoration: none;
+    color: #050404; /* White text color for the links */
+    font-size: 12px; /* Font size for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d0e1ff; /* Light blue color on hover */
+}
+
+.dropdown {
+    position: relative; /* Position relative to allow absolute positioning of dropdown-content */
+}
+
+.dropdown .nav-link {
+    cursor: pointer; /* Indicate that it's clickable */
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Position relative to the dropdown container */
+    background-color: #67717b; /* Background color of dropdown */
+    min-width: 140px; /* Minimum width of dropdown */
+    z-index: 1; /* Ensure dropdown is above other content */
+    top: 100%; /* Position dropdown below the dropdown trigger */
+    left: 0; /* Align dropdown to the left */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    padding: 4px 0; /* Padding for dropdown items */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 4px 8px; /* Padding for dropdown items */
+    color: #fff; /* White text color for dropdown links */
+    text-decoration: none;
+    font-size: 10px; /* Font size for dropdown links */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    background-color: #67717b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-login {
+    margin-top: 10px;
+}
+
 .header {
     display: flex;
     justify-content: space-between; /* Space between left and right elements */
@@ -42,89 +179,6 @@
 .quoteButton:hover {
     background-color: #e64a19; /* Darker orange on hover */
 }
-/* src/Header.css */
-.nav-header {
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav menu */
-    align-items: center; /* Center items vertically */
-    padding: 4px 8px; /* Reduced padding for a smaller header */
-    background-color: #f57c00; /* Blue background color */
-    border-bottom: 1px solid #ddd; /* Optional: Border for separation */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 24px; /* Smaller size for the logo */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    flex-grow: 1; /* Allows nav-menu to use remaining space */
-    justify-content: center; /* Center links horizontally */
-    position: relative; /* Required for dropdown positioning */
-}
-
-.nav-link {
-    margin: 0 8px; /* Reduced horizontal spacing between links */
-    text-decoration: none;
-    color: #fff; /* White text color for the links */
-    font-size: 12px; /* Reduced font size for links */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #d0e1ff; /* Light blue color on hover */
-}
-
-/* Dropdown container */
-.dropdown {
-    position: relative; /* Allows dropdown content to be positioned absolutely */
-}
-.logo-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: flex-end; /* Align logo to the right */
-    padding: 10px; /* Adjust padding as needed */
-  }
-.companyImage{
-    display: block; /* Ensure the logo is displayed as a block element */
-    margin: 20px auto;
-    width: auto;
-}
-
-.dropdown-content {
-    display: none; /* Hide dropdown content by default */
-    position: absolute; /* Position relative to the .dropdown container */
-    background-color: #67717b; /* Background color of dropdown */
-    min-width: 140px; /* Minimum width of dropdown */
-    z-index: 1; /* Ensure dropdown is above other content */
-    top: 100%; /* Position dropdown below the dropdown trigger */
-    left: 0; /* Align dropdown to the left */
-    border-radius: 4px; /* Optional: Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Shadow for better visibility */
-    padding: 4px 0; /* Add padding for better spacing inside the dropdown */
-}
-
-/* Display dropdown content on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-link {
-    display: block;
-    padding: 4px 8px; /* Reduced padding for a smaller dropdown item */
-    color: #fff; /* White text color for dropdown links */
-    text-decoration: none;
-    font-size: 10px; /* Reduced font size for dropdown links */
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-link:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+.login-button,.signup-button{
+    background-color:#159ee3f2;
 }
