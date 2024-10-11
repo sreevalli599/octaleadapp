@@ -1,12 +1,19 @@
 /* src/Header.css */
 .nav-header {
     display: flex;
-    justify-content: space-between; /* Space between nav menu and login button */
-    align-items: center; /* Center items vertically */
-    padding: 4px 8px; /* Adjust padding as needed */
-    background-color: #f4f4f4; /* Background color */
-    border-bottom: 1px solid #ddd; /* Optional: Border for separation */
-}
+    align-items: center; /* Vertically align logo and nav items */
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding to reduce space */
+    background-color: #ffffff; /* Background color */
+    border-bottom: 1px solid #ddd;
+  }
+  nav.nav-menu {
+    display: flex;
+    gap: 15px; /* Adjust this to control space between links */
+  }
+  .img {
+    margin-right: 10px; /* Reduce margin between logo and Home */
+  }
 .headerRight {
     display: flex;
     align-items: center; 

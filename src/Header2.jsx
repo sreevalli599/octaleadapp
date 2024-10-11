@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import capitalLeadLogo from './capitalleadlogo.jpeg';
 import { GoogleLogin } from 'react-google-login';
 import { PublicClientApplication } from '@azure/msal-browser';
 import './Header.css';
@@ -48,7 +49,11 @@ const Header2 = () => {
   return (
     <>
       <header className="nav-header">
-        <nav className="nav-menu">
+       
+        <div>
+  <img src={capitalLeadLogo} alt="Capital Lead Logo" style={{ width: '30%', height: 'auto' }} />
+</div>
+<nav className="nav-menu">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About Us</Link>
           <div className="dropdown">
@@ -75,9 +80,7 @@ const Header2 = () => {
           <Link to="/blogs" className="nav-link">Blogs</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
         </nav>
-        <div className="headerRight">
-          <button className="login-button" onClick={() => { setIsSignUp(false); openModal(); }}>Login</button>
-        </div>
+      
       </header>
 
       {/* Modal for Login/Sign Up */}

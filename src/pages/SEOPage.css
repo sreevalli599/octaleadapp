@@ -1,31 +1,66 @@
-.seo-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-    width: 100%;
-    height: 100vh; /* Optional: Full viewport height */
-  }
-  
-  .seo-image {
-    grid-column: 1; /* First column */
-  }
-  
-  .seo-image img {
-    width: 100%;
-    height: auto; /* Keeps aspect ratio */
-    object-fit: cover; /* Ensures the image covers the area */
-  }
-  
-  .seo-content {
-    grid-column: 2; /* Second column */
-    padding: 20px; /* Optional: Adds some padding around the text */
-    box-sizing: border-box; /* Ensures padding is included in width calculation */
-  }
-  
-  .seo-content h1, .seo-content h2, .seo-content p, .seo-content ul {
-    margin-bottom: 15px;
-  }
-  
-  .seo-content ul {
-    padding-left: 20px;
-  }
-  
+.seo-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.seo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seo-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.seo-image-right {
+  flex: 1;
+}
+
+.seo-image-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.seo-text {
+  flex: 2;
+  padding-left: 20px;
+}
+
+h2 {
+  color: #007BFF; /* Primary color */
+}
+
+.seo-benefits, .seo-octaleads {
+  margin: 40px 0;
+}
+
+.benefit-boxes, .octaleads-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.benefit-box, .octaleads-box {
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for subtle depth */
+  background-color: #fff; /* Background color for boxes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.benefit-box:hover, .octaleads-box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.benefit-icon, .octaleads-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-right: 10px; /* Space between icon and text */
+}

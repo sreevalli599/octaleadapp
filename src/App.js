@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
 import Header2 from './Header2';
 import ContactUsForm from './ContactUsForm';
 import Footer from './Footer';
-import capitaLead from './capitalleadlogo.jpeg';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import useChatbot from './useChatbot'; // Import the custom hook
 
@@ -40,10 +38,10 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Header />
+         
           <Header2 />
           <div className="logo-container">
-            <img className="company-image" src={capitaLead} alt="Company Logo" />
+          
           </div>
         </header>
         <main>

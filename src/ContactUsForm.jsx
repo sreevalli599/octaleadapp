@@ -34,12 +34,17 @@ useEffect(() => {
         <h2>Thinking about improving your {message} ? We're here to assist you with tailored solutions.</h2>
       </div>
       <div className="contact-form">
-        <form onSubmit={handleSubmit}>
+      <form
+        className="contact-form"
+        action="https://formspree.io/f/myzyygrp" // Replace with your Formspree form ID
+        method="POST"
+      >
           <label>
             Name:
             <input 
               type="text" 
               value={name} 
+              name="name"
               onChange={(e) => setName(e.target.value)} 
               required 
             />
@@ -49,6 +54,7 @@ useEffect(() => {
             <input 
               type="tel" 
               value={phone} 
+              name="phone"
               onChange={(e) => setPhone(e.target.value)} 
               required 
             />
@@ -58,6 +64,7 @@ useEffect(() => {
             <input 
               type="email" 
               value={email} 
+              name="email"
               onChange={(e) => setEmail(e.target.value)} 
               required 
             />

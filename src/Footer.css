@@ -1,68 +1,79 @@
-/* src/Footer.css */
 .footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #444;
-  }
-  
-  .about-us {
-    flex: 2;
-    padding-right: 20px;
-  }
-  
-  .about-us h2 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links {
-    flex: 1;
-  }
-  
-  .footer-links h2 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-contact {
-    margin-top: 20px;
-  }
-  
-  .footer-contact h2 {
-    margin-bottom: 10px;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    padding-top: 10px;
-  }
-  .emailref{
-    color: #fff;
-  }
-  
+  background-color: #000; /* Black background for the footer */
+  color: #fff; /* White text color for readability */
+  padding: 30px;
+  width: 100%;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 200px;
+}
+
+.footer-section h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff; /* White color for headings */
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #ccc; /* Light gray text for better contrast */
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff; /* White color for links */
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #bbb; /* Light gray on hover for contrast */
+}
+
+.footer-contact a {
+  color: #fff; /* White color for contact links */
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #bbb; /* Light gray on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.85em;
+  color: #555;
+}
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 15px; /* Space between icons */
+  margin-top: 20px; /* Space above the icons */
+}
+
+.social-icons a {
+  color: #fff; /* White color for icons */
+  font-size: 24px; /* Size of the icons */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+  color: #bbb; /* Change color on hover */
+}
+
