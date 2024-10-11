@@ -1,50 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import capitalLeadLogo from './capitalleadlogo.jpeg';
-import { GoogleLogin } from 'react-google-login';
-import { PublicClientApplication } from '@azure/msal-browser';
 import './Header.css';
 
-const pca = new PublicClientApplication({
-  auth: {
-    clientId: 'YOUR_MICROSOFT_CLIENT_ID',
-    authority: 'https://login.microsoftonline.com/common',
-    redirectUri: 'http://localhost:3000',
-  },
-});
+
 
 const Header2 = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setIsSignUp(false);
-  };
+ 
 
-  const handleGoogleSuccess = (response) => {
-    console.log('Google login success', response);
-  };
+  
 
-  const handleGoogleError = (error) => {
-    console.error('Google login error', error);
-  };
-
-  const handleMicrosoftLogin = async () => {
-    try {
-      const loginResponse = await pca.loginPopup({
-        scopes: ['user.read'],
-      });
-      console.log('Microsoft login success', loginResponse);
-    } catch (error) {
-      console.error('Microsoft login error', error);
-    }
-  };
-
-  const handleTruecallerLogin = () => {
-    console.log('Truecaller login clicked');
-  };
 
   return (
     <>
@@ -87,8 +55,7 @@ const Header2 = () => {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <button className="close-modal" onClick={closeModal}>X</button>
-            <h2>{isSignUp ? 'Sign Up' : 'Login'}</h2>
+           <h2>{isSignUp ? 'Sign Up' : 'Login'}</h2>
             {isSignUp ? (
               <form className="login-form">
                 <input type="email" placeholder="Email" required />
@@ -103,15 +70,7 @@ const Header2 = () => {
               </form>
             )}
             <div className="social-login">
-              <GoogleLogin
-                clientId="YOUR_GOOGLE_CLIENT_ID"
-                buttonText="Continue with Google"
-                onSuccess={handleGoogleSuccess}
-                onError={handleGoogleError}
-                cookiePolicy={'single_host_origin'}
-              />
-              <button className="social-button" onClick={handleMicrosoftLogin}>Continue with Hotmail</button>
-              <button className="social-button" onClick={handleTruecallerLogin}>Continue with Truecaller</button>
+             
             </div>
           </div>
         </div>
