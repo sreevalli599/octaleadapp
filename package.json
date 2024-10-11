@@ -21,12 +21,10 @@
     "web-vitals": "^2.1.4",
     "webpack": "^5.95.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+ "scripts": {
+  "prebuild": "npm install --force",
+  "build": "react-scripts build"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
