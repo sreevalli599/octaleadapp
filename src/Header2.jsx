@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import capitalLeadLogo from './capitalleadlogo.jpeg';
 import './Header.css';
@@ -6,16 +6,9 @@ import './Header.css';
 
 
 const Header2 = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
-
- 
-
-  
-
 
   return (
-    <>
+    <div>
       <header className="nav-header">
        
         <div>
@@ -51,31 +44,13 @@ const Header2 = () => {
       
       </header>
 
-      {/* Modal for Login/Sign Up */}
-      {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-           <h2>{isSignUp ? 'Sign Up' : 'Login'}</h2>
-            {isSignUp ? (
-              <form className="login-form">
-                <input type="email" placeholder="Email" required />
-                <input type="password" placeholder="Password" required />
-                <button type="submit">Sign Up</button>
-              </form>
-            ) : (
-              <form className="login-form">
-                <input type="email" placeholder="Email" required />
-                <input type="password" placeholder="Password" required />
-                <button type="submit">Login</button>
-              </form>
-            )}
-            <div className="social-login">
-             
-            </div>
+    
+      
+        
           </div>
-        </div>
-      )}
-    </>
+       
+      
+    
   );
 };
 

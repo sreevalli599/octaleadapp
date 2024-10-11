@@ -18,14 +18,7 @@ useEffect(() => {
     setMessage(service);
 }, [location.pathname]); 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted', { name, phone, email });
-    setName('');
-    setPhone('');
-    setEmail('');
-  };
+ 
 
 
   return (
